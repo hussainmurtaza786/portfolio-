@@ -4,12 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Twitter, Copy, CheckCheck } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
+import { socialLinks } from "../app-config";
 
-const socialLinks = [
-  { icon: Github, href: "https://github.com/hussain", label: "GitHub" },
-  { icon: Linkedin, href: "https://github.com/hussainmurtaza786", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/hussain", label: "Twitter" },
-];
 
 export default function Hero() {
   const [copied, setCopied] = useState(false);
@@ -28,7 +24,7 @@ export default function Hero() {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("Hussain.dev");
+    navigator.clipboard.writeText("hussainmurtaza5222@gmail.com.dev");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -72,7 +68,7 @@ export default function Hero() {
             <span className="text-text-secondary">,</span>
             <br />
             <span className="text-text-secondary pl-4">passion:</span>{" "}
-            <span className="text-accent-3">&apos;Building great UX&apos;</span>
+            <span className="text-accent-3">&apos;Building great UI / UX&apos;</span>
             <br />
             <span className="text-text-secondary">{"}"}</span>
           </div>
@@ -141,11 +137,9 @@ export default function Hero() {
                 2000,
                 "beautiful user interfaces",
                 2000,
-                "robust REST APIs",
-                2000,
-                "cloud-native solutions",
-                2000,
                 "full-stack experiences",
+                2000,
+                "optimized digital platforms",
                 2000,
               ]}
               repeat={Infinity}
@@ -161,8 +155,8 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="max-w-2xl text-text-secondary text-base md:text-lg leading-relaxed mb-12"
         >
-          Fullstack Developer with 2+ years of experience crafting high-performance
-          web applications. Passionate about clean code, great DX, and turning complex
+          Fullstack Developer with 3+ years of experience crafting high-performance
+          web applications. Passionate about clean code, and turning complex
           problems into elegant solutions.
         </motion.p>
 
@@ -214,20 +208,20 @@ export default function Hero() {
             </motion.a>
           ))}
           <div className="w-px h-6 bg-border" />
-          <span className="text-text-muted text-sm font-mono">@hussain</span>
+          <span className="text-text-muted text-sm font-mono">@hussainmurtaza</span>
         </motion.div>
 
         {/* Stats row */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
           className="grid grid-cols-3 gap-8 md:gap-16"
         >
           {[
-            { value: "6+", label: "Years Experience" },
-            { value: "50+", label: "Projects Shipped" },
-            { value: "20+", label: "Happy Clients" },
+            { value: "2+", label: "Years Experience" },
+            { value: "10+", label: "Projects Shipped" },
+            { value: "3+", label: "Happy Clients" },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="font-display font-bold text-3xl md:text-4xl text-accent mb-1">
@@ -236,7 +230,7 @@ export default function Hero() {
               <div className="text-text-muted text-sm font-body">{stat.label}</div>
             </div>
           ))}
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Scroll indicator */}

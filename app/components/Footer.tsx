@@ -41,9 +41,8 @@ export default function Footer() {
                 <Terminal size={14} className="text-bg" />
               </div>
               <span className="font-display font-bold text-lg">
-                <span className="text-text-primary">Alex</span>
+                <span className="text-text-primary">Hussain</span>
                 <span className="text-accent">.</span>
-                <span className="text-text-secondary">dev</span>
               </span>
             </div>
             <p className="text-text-muted text-sm leading-relaxed mb-6 max-w-xs">

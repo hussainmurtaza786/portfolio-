@@ -7,90 +7,39 @@ import { Building2, GraduationCap, Award } from "lucide-react";
 
 const experiences = [
   {
-    company: "TechFlow Inc.",
-    role: " Fullstack Developer",
-    period: "Jan 2024 – Present",
+    company: "SyntaxFit",
+    role: "Fullstack Developer",
+    period: "Nov 2022 – OCT 2025",
     type: "work",
-    location: "London, UK (Hybrid)",
+    location: "Pakistan, Karachi",
     description:
-      "Leading development of the core product platform serving 500k+ users. Architecting microservices migration from monolithic Rails app to Next.js + Node.js stack.",
+      "Started my web development journey at SyntaxFit, where I learned core frontend and backend concepts and applied them in real projects. This role allowed me to build end-to-end websites and implement full web solutions from scratch, turning ideas into functional products.",
     achievements: [
-      "Reduced page load time by 60% through SSR optimization and edge caching",
-      "Led team of 5 engineers, introduced code review culture and CI/CD best practices",
-      "Built real-time notification system handling 1M+ daily events with 99.9% delivery rate",
-      "Designed and implemented multi-tenant PostgreSQL schema supporting enterprise clients",
+      "Built end-to-end websites with full frontend and backend integration",
+      "Implemented complete website solutions including dynamic content, product management, and CMS-based systems",
+      "Learned and applied industry-standard practices in web development, deployment, and database management",
+      "Gained hands-on experience in modern tech stack and real-world project delivery"
     ],
-    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
+    tech: ["HTML", "CSS", "Javascript", "React.js", "Next.js", "TypeScript", "Node.js", "Tailwind Css", "Chakra UI", "Payload CMS", "Prisma", "PostgreSQL", "AWS"],
     color: "#00D4FF",
   },
   {
-    company: "Nexus Labs",
-    role: "Fullstack Developer",
-    period: "Mar 2022 – Dec 2023",
-    type: "work",
-    location: "Remote (US Company)",
-    description:
-      "Full-stack development for a Series B SaaS startup in the HR tech space. Built core product features from conception to production.",
-    achievements: [
-      "Architected and shipped candidate tracking system used by 200+ enterprise clients",
-      "Improved test coverage from 12% to 87% using Jest, Cypress and Playwright",
-      "Built AI-powered resume parsing feature using OpenAI API, cutting review time by 70%",
-      "Migrated monolithic Express app to microservices, reducing deployment complexity by 40%",
-    ],
-    tech: ["React", "Node.js", "Python", "FastAPI", "MongoDB", "Redis", "GCP", "Docker"],
-    color: "#7B61FF",
-  },
-  {
-    company: "PixelCraft Studio",
-    role: "Frontend Developer",
-    period: "Jun 2020 – Feb 2022",
-    type: "work",
-    location: "Manchester, UK",
-    description:
-      "Frontend specialist at a creative digital agency. Delivered pixel-perfect web experiences for clients across fintech, healthcare, and e-commerce verticals.",
-    achievements: [
-      "Delivered 3 client projects on time and within budget",
-      "Built reusable component library reducing development time by 35%",
-      "Implemented complex animations and interactive data visualizations using D3.js",
-      "Mentored 2 junior developers in React best practices and modern CSS",
-    ],
-    tech: ["React", "TypeScript", "SASS", ],
-    color: "#00FFB3",
-  },
-  {
-    company: "StartupX",
-    role: "Junior Full-Stack Developer",
-    period: "Sep 2018 – May 2020",
-    type: "work",
-    location: "Manchester, UK",
-    description:
-      "First engineering role at an early-stage fintech startup. Wore many hats, contributing to frontend, backend, and infrastructure across a lean team.",
-    achievements: [
-      "Built and shipped the company's first mobile-responsive web app from scratch",
-      "Implemented Stripe payment integration processing £500k+ monthly transactions",
-      "Set up initial CI/CD pipeline using GitHub Actions and AWS",
-      "Contributed to fundraising technical documentation for seed round",
-    ],
-    tech: ["React", "Node.js", "Express", "MySQL", "AWS EC2", "Stripe", "Docker"],
-    color: "#FF6B6B",
-  },
-  {
-    company: "University of Manchester",
-    role: "BSc Computer Science",
-    period: "Sep 2014 – Jun 2018",
+    company: "Indus University",
+    role: "BS Computer Science",
+    period: "OCT 2025 – Present",
     type: "edu",
-    location: "Manchester, UK",
+    location: "Pakistan, Karachi",
     description:
-      "First Class Honours degree. Specialized in Software Engineering, Distributed Systems, and Algorithms. Dissertation on distributed consensus algorithms.",
+      "Currently pursuing my BSc in Computer Science. Focusing on building a strong foundation in programming, algorithms, and software engineering principles. I am actively learning and exploring practical applications in web and software development.",
     achievements: [
-      "First Class Honours — 2:1 or above in all modules",
-      "Best Dissertation Award for research on Raft consensus algorithm implementation",
-      "Founded university coding club — grew to 120+ members in 2 years",
-      "Summer internship at IBM Research as part of industrial placement year",
+      "Gaining foundational knowledge in software engineering and distributed systems",
+      "Actively applying learning to personal and academic projects",
+      "Participating in coding clubs and collaborative learning initiatives",
+      "Building practical skills to complement professional experience"
     ],
-    tech: ["Java", "Python", "C++", "Haskell", "SQL", "Linux", "ML/AI fundamentals"],
+    tech: ["C", "C++"],
     color: "#7B61FF",
-  },
+  }
 ];
 
 // const certifications = [
@@ -105,7 +54,7 @@ export default function Experience() {
   const [activeExp, setActiveExp] = useState(0);
 
   return (
-    <section id="experience" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="experience" ref={ref} className="relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface/10 to-bg pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -140,8 +89,8 @@ export default function Experience() {
                 key={i}
                 onClick={() => setActiveExp(i)}
                 className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 text-sm font-body ${activeExp === i
-                    ? "bg-surface border border-border text-text-primary"
-                    : "text-text-muted hover:text-text-secondary hover:bg-surface/50"
+                  ? "bg-surface border border-border text-text-primary"
+                  : "text-text-muted hover:text-text-secondary hover:bg-surface/50"
                   }`}
               >
                 {exp.type === "edu" ? (

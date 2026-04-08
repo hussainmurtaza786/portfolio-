@@ -44,7 +44,7 @@ portfolio/
 │   ├── layout.tsx           # Root layout with metadata
 │   └── page.tsx             # Main page composition
 ├── public/
-│   └── cv-alex-karimi.pdf  # Downloadable CV
+│   └── hussain-cv.pdf  # Downloadable CV
 ├── tailwind.config.ts
 ├── tsconfig.json
 └── package.json
@@ -62,7 +62,7 @@ Update your details across the section files:
 - **Contact.tsx** — Email, social profiles
 
 ### CV/Resume
-Replace `public/cv-alex-karimi.pdf` with your own PDF.
+Replace `public/hussain-cv.pdf` with your own PDF.
 Update the download link in `Navbar.tsx` and `About.tsx`.
 
 ### Colors & Theme

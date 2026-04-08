@@ -8,7 +8,7 @@ const skillCategories = [
     title: "Frontend",
     color: "#00D4FF",
     skills: [
-      { name: "React / Next.js", level: 85 },
+      { name: "React / Next.js", level: 95 },
       { name: "TypeScript", level: 80 },
       { name: "Tailwind CSS", level: 95 },
       { name: "Framer Motion", level: 75 },
@@ -21,20 +21,21 @@ const skillCategories = [
     skills: [
       { name: "Node.js ", level: 70 },
       { name: "Python", level: 50 },
-      { name: "PostgreSQL", level: 70 },
+      { name: "PostgreSQL", level: 60 },
+      { name: "payload CMS", level: 85 },
     ],
   },
-  // {
-  //   title: "DevOps & Cloud",
-  //   color: "#00FFB3",
-  //   skills: [
-  //     { name: "AWS (EC2, S3, RDS)", level: 85 },
-  //     { name: "Docker / Kubernetes", level: 83 },
-  //     { name: "CI/CD (GitHub Actions)", level: 90 },
-  //     { name: "Terraform", level: 72 },
-  //     { name: "Linux / Bash", level: 88 },
-  //   ],
-  // },
+  {
+    title: "DevOps / Deployment",
+    color: "#FF8C00",
+    skills: [
+      { name: "GitHub", level: 90 },
+      { name: "Vercel", level: 85 },
+      { name: "Netlify", level: 80 },
+      { name: "NeonDB", level: 80 },
+    ],
+  },
+
 ];
 
 const techStack = [
@@ -47,7 +48,7 @@ export default function Skills() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="skills" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="skills" ref={ref} className="relative  overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface/10 to-bg pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
@@ -63,7 +64,7 @@ export default function Skills() {
             <div className="h-px w-12 bg-accent/30" />
             <span className="text-text-muted text-sm font-mono">tech_stack</span>
           </div>
-          <h2 className="font-display font-bold text-4xl md:text-5xl text-text-primary">
+          <h2 className="font-display text-center font-bold text-4xl md:text-5xl text-text-primary">
             Skills &<span className="gradient-text"> Technologies</span>
           </h2>
         </motion.div>

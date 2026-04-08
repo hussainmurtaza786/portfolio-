@@ -7,10 +7,10 @@ import toast from "react-hot-toast";
 import { Mail, Github, Linkedin, Twitter, Send, MapPin, Clock, CheckCircle } from "lucide-react";
 
 const contactLinks = [
-  { icon: Mail, label: "Email", value: "alex@karimi.dev", href: "mailto:alex@karimi.dev", color: "#00D4FF" },
-  { icon: Github, label: "GitHub", value: "@hussain", href: "https://github.com/hussain", color: "#E8F4F8" },
-  { icon: Linkedin, label: "LinkedIn", value: "in/hussain", href: "https://linkedin.com/in/hussain", color: "#0A66C2" },
-  { icon: Twitter, label: "Twitter", value: "@hussain", href: "https://twitter.com/hussain", color: "#1DA1F2" },
+  { icon: Mail, label: "Email", value: "hussainmurtaza5222@gmail.com", href: "mailto:hussainmurtaza5222@gmail.com", color: "#00D4FF" },
+  { icon: Github, label: "GitHub", value: "@hussainmurtaza786", href: "https://github.com/hussain", color: "#E8F4F8" },
+  // { icon: Linkedin, label: "LinkedIn", value: "in/hussain", href: "https://linkedin.com/in/hussain", color: "#0A66C2" },
+  // { icon: Twitter, label: "Twitter", value: "@hussain", href: "https://twitter.com/hussain", color: "#1DA1F2" },
 ];
 
 export default function Contact() {
@@ -40,7 +40,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="contact" ref={ref} className="relative py-12 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface/10 to-bg pointer-events-none" />
 
       {/* Glow */}
@@ -63,7 +63,7 @@ export default function Contact() {
             Let&apos;s Work<span className="gradient-text"> Together</span>
           </h2>
           <p className="text-text-secondary mt-4 max-w-lg leading-relaxed">
-            Have a project in mind? Looking for a senior developer to join your team? Or just
+            Have a project in mind? Looking for a developer to join your team? Or just
             want to say hi? My inbox is always open!
           </p>
         </motion.div>
@@ -89,12 +89,12 @@ export default function Contact() {
               <div className="mt-4 pt-4 border-t border-border space-y-2">
                 <div className="flex items-center gap-2 text-text-muted text-sm">
                   <MapPin size={14} className="text-accent" />
-                  London, UK — Open to remote
+                  Pakistan, Karachi — Open to remote
                 </div>
-                <div className="flex items-center gap-2 text-text-muted text-sm">
+                {/* <div className="flex items-center gap-2 text-text-muted text-sm">
                   <Clock size={14} className="text-accent" />
                   GMT / BST timezone
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -207,11 +207,10 @@ export default function Contact() {
                 disabled={sending}
                 whileHover={{ scale: sending ? 1 : 1.02 }}
                 whileTap={{ scale: sending ? 1 : 0.98 }}
-                className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-sm transition-all duration-300 ${
-                  sent
-                    ? "bg-highlight/20 text-highlight border border-highlight/30"
-                    : "bg-accent text-bg hover:shadow-glow"
-                } ${sending ? "opacity-70 cursor-not-allowed" : ""}`}
+                className={`w-full flex items-center justify-center gap-2 py-4 rounded-xl font-semibold text-sm transition-all duration-300 ${sent
+                  ? "bg-highlight/20 text-highlight border border-highlight/30"
+                  : "bg-accent text-bg hover:shadow-glow"
+                  } ${sending ? "opacity-70 cursor-not-allowed" : ""}`}
               >
                 {sent ? (
                   <>

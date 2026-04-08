@@ -10,100 +10,66 @@ const categories = ["All", "Fullstack", "Frontend", "Backend", "Open Source"];
 const projects = [
   {
     id: 1,
-    title: "FlowBoard Pro",
+    title: "POS System",
     description:
-      "A real-time collaborative project management platform with AI-powered task prioritization, Kanban boards, and Gantt charts. Built for teams of all sizes.",
+      "A web-based Point of Sale system with secure login, real-time dashboard insights, and complete inventory and sales management.",
+
     longDesc:
-      "FlowBoard Pro handles 10k+ concurrent users with WebSocket-based real-time sync. Features include AI task suggestions powered by OpenAI, multi-workspace management, and advanced analytics dashboard.",
-    tech: ["Next.js", "TypeScript", "Socket.io", "PostgreSQL", "Redis", "OpenAI", "Tailwind"],
-    category: "Fullstack",
-    stars: 1240,
-    forks: 187,
+      "This POS system starts with a secure login using a valid ID and password. After logging in, users are greeted with an interactive dashboard displaying daily, monthly, and yearly sales, returns, and performance analytics. A sidebar navigation provides access to key modules such as product inventory, where users can perform full CRUD operations, manage stock levels, and generate detailed reports with print functionality. The system also includes expense tracking, sales history, return management, and basic analytics to help monitor business performance. Designed for efficiency, it streamlines retail operations with a user-friendly interface and organized workflow.",
+
+    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "NeonDB", "Chakra UI"],
+    category: "Open Source",
     gradient: "from-accent/20 to-accent-2/20",
     accent: "#00D4FF",
-    href: "https://github.com/hussain/flowboard",
-    live: "https://flowboard.pro",
+    href: "https://github.com/hussainmurtaza786/pos-app",
+    live: "https://pos-app-seven-ochre.vercel.app/",
     featured: true,
   },
   {
     id: 2,
-    title: "ShopEngine API",
+    title: "Technobots53",
     description:
-      "High-performance e-commerce API powering 5M+ monthly transactions. Built with microservices architecture, event-driven design, and comprehensive documentation.",
+      "Fullstack website with dynamic content powered by Payload CMS, featuring responsive frontend and complete backend integration.",
     longDesc:
-      "Microservices architecture with API Gateway pattern. Handles payment processing, inventory management, order fulfillment, and real-time notifications. 99.99% uptime SLA.",
-    tech: ["Node.js", "FastAPI", "PostgreSQL", "Redis", "Docker", "AWS", "Stripe"],
-    category: "Backend",
-    stars: 892,
-    forks: 134,
+      "Built end-to-end with both frontend and backend handled by me. The frontend uses Next.js and Chakra UI for a responsive, modern interface, while the backend leverages Payload CMS for content management, including dynamic gallery pages. PostgreSQL with NeonDB powers the database, enabling smooth data retrieval and management. Features include product listings, dynamic galleries, and fully managed CMS content for seamless updates and scalability.",
+    tech: ["Next.js", "TypeScript", "Payload CMS", "PostgreSQL", "NeonDB", "Chakra UI"],
+    category: "Fullstack",
     gradient: "from-accent-2/20 to-accent-3/20",
     accent: "#7B61FF",
-    href: "https://github.com/hussain/shopengine",
-    live: "https://shopengine.dev",
-    featured: true,
+    href: "https://github.com/syntaxfit/technobots53",
+    live: "https://technobots53.com/",
+    featured: false,
   },
   {
     id: 3,
-    title: "DesignSystem UI",
+    title: "ShariqTraders",
     description:
-      "An open-source React component library with 80+ production-ready components, dark/light mode, and full TypeScript support. 4k+ GitHub stars.",
+      "Fullstack website with dynamic content powered by Payload CMS, featuring responsive frontend and complete backend integration.",
     longDesc:
-      "Fully accessible components following WAI-ARIA standards. Includes Storybook documentation, visual regression testing with Chromatic, and automated releases.",
-    tech: ["React", "TypeScript", "Storybook", "Chromatic", "Radix UI", "Tailwind"],
-    category: "Open Source",
-    stars: 4200,
-    forks: 620,
-    gradient: "from-highlight/20 to-accent/20",
-    accent: "#00FFB3",
-    href: "https://github.com/hussain/design-system",
-    live: "https://ds.hussain.dev",
-    featured: true,
+      "Developed both frontend and backend independently. Frontend built with Next.js and Chakra UI ensures a clean and responsive design. Backend is powered by Payload CMS, allowing dynamic content management including product listings and gallery pages. PostgreSQL with NeonDB handles all database operations efficiently. The platform supports easy content updates, CRUD operations, and scalability for growing business needs.",
+    tech: ["Next.js", "TypeScript", "Payload CMS", "PostgreSQL", "NeonDB", "Chakra UI"],
+    category: "Fullstack",
+    gradient: "from-accent-2/20 to-accent-3/20",
+    accent: "#7B61FF",
+    href: "https://github.com/syntaxfit/shariqtraders",
+    live: "https://shariqtraders.com/",
+    featured: false,
   },
   {
     id: 4,
-    title: "AIChat Dashboard",
+    title: "AhsanFaisal&Co",
     description:
-      "Analytics dashboard for AI conversation platforms. Real-time metrics, conversation flow visualization, and cost tracking across multiple LLM providers.",
-    tech: ["Next.js", "D3.js", "Prisma", "PostgreSQL", "tRPC", "Vercel"],
-    category: "Frontend",
-    stars: 456,
-    forks: 78,
-    gradient: "from-accent-3/20 to-accent/20",
-    accent: "#FF6B6B",
-    href: "https://github.com/hussain/ai-dashboard",
-    live: "https://aichat.hussain.dev",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "DevPulse CLI",
-    description:
-      "A developer productivity CLI tool that integrates with GitHub, Jira, and Slack. Get daily standup reports, PR summaries, and sprint metrics right in your terminal.",
-    tech: ["Node.js", "TypeScript", "GitHub API", "Jira API", "Ink", "Commander.js"],
-    category: "Open Source",
-    stars: 780,
-    forks: 112,
-    gradient: "from-accent-2/20 to-highlight/20",
-    accent: "#7B61FF",
-    href: "https://github.com/hussain/devpulse",
-    live: "https://npmjs.com/package/devpulse",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "RealtimeCollab",
-    description:
-      "Google Docs-style collaborative editor with operational transformation, presence awareness, and comment threads. Sub-100ms latency globally.",
-    tech: ["React", "Yjs", "Socket.io", "Node.js", "MongoDB", "AWS CloudFront"],
+      "Fullstack furniture website with dynamic content powered by Payload CMS, showcasing products with responsive frontend and complete backend integration.",
+    longDesc:
+      "Developed both frontend and backend independently. The frontend, built with Next.js and Chakra UI, provides a modern and responsive interface for browsing furniture products. The backend uses Payload CMS to manage dynamic content, including product listings and galleries. Customers can view product details, check prices, and contact the store via WhatsApp or email, as there is no built-in billing system. PostgreSQL with NeonDB handles all database operations efficiently, supporting easy content updates, CRUD operations, and scalability for future growth.",
+    tech: ["Next.js", "TypeScript", "Payload CMS", "PostgreSQL", "NeonDB", "Chakra UI"],
     category: "Fullstack",
-    stars: 623,
-    forks: 95,
-    gradient: "from-accent/20 to-highlight/20",
-    accent: "#00D4FF",
-    href: "https://github.com/hussain/realtime-collab",
-    live: "https://collab.hussain.dev",
+    gradient: "from-accent-2/20 to-accent-3/20",
+    accent: "#7B61FF",
+    href: "https://github.com/syntaxfit/ahsanfaisalco",
+    live: "https://ahsanfaisalco.com/",
     featured: false,
-  },
+  }
 ];
 
 export default function Projects() {
@@ -135,7 +101,7 @@ export default function Projects() {
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl text-text-primary">
             Projects I&apos;ve{" "}
-            <span className="gradient-text">Built & Shipped</span>
+            <span className="gradient-text">Built </span>
           </h2>
         </motion.div>
 
@@ -150,11 +116,10 @@ export default function Projects() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full text-sm font-mono transition-all duration-200 ${
-                activeCategory === cat
-                  ? "bg-accent text-bg font-semibold"
-                  : "bg-surface border border-border text-text-secondary hover:border-accent/30 hover:text-text-primary"
-              }`}
+              className={`px-5 py-2 rounded-full text-sm font-mono transition-all duration-200 ${activeCategory === cat
+                ? "bg-accent text-bg font-semibold"
+                : "bg-surface border border-border text-text-secondary hover:border-accent/30 hover:text-text-primary"
+                }`}
             >
               {cat}
             </button>
@@ -257,14 +222,14 @@ export default function Projects() {
 
                   {/* Stats */}
                   <div className="flex items-center gap-4 text-text-muted text-xs font-mono">
-                    <span className="flex items-center gap-1">
+                    {/* <span className="flex items-center gap-1">
                       <Star size={12} />
                       {project.stars.toLocaleString()}
-                    </span>
-                    <span className="flex items-center gap-1">
+                    </span> */}
+                    {/* <span className="flex items-center gap-1">
                       <GitFork size={12} />
                       {project.forks}
-                    </span>
+                    </span> */}
                     <span
                       className="ml-auto text-xs px-2 py-0.5 rounded-full border"
                       style={{ color: project.accent, borderColor: `${project.accent}30` }}
@@ -286,7 +251,7 @@ export default function Projects() {
           className="text-center mt-16"
         >
           <a
-            href="https://github.com/hussain"
+            href="https://github.com/hussainmurtaza786"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 border border-border rounded-xl text-text-secondary hover:text-text-primary hover:border-accent/40 font-body font-medium transition-all duration-200"

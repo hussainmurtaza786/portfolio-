@@ -35,19 +35,18 @@ const highlights = [
   },
 ];
 
-const timeline = [
-  { year: "2024–Now", role: "Senior Fullstack Engineer", company: "TechFlow Inc.", type: "work" },
-  { year: "2022–2024", role: "Fullstack Developer", company: "Nexus Labs", type: "work" },
-  { year: "2020–2022", role: "Frontend Developer", company: "PixelCraft Studio", type: "work" },
-  { year: "2018–2020", role: "Junior Developer", company: "StartupX", type: "work" },
-  { year: "2014–2018", role: "BSc Computer Science", company: "University of Manchester", type: "edu" },
-];
+// const timeline = [
+//   { year: "2022–2024", role: "Fullstack Developer", company: "Nexus Labs", type: "work" },
+//   { year: "2020–2022", role: "Frontend Developer", company: "PixelCraft Studio", type: "work" },
+//   { year: "2018–2020", role: "Junior Developer", company: "StartupX", type: "work" },
+//   { year: "2014–2018", role: "BSc Computer Science", company: "University of Manchester", type: "edu" },
+// ];
 
 export default function About() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="about" ref={ref} className="relative py-32 overflow-hidden">
+    <section id="about" ref={ref} className="relative  overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-bg via-surface/20 to-bg pointer-events-none" />
 
@@ -57,7 +56,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="mb-20"
+          className="mb-20 text-center"
         >
           <div className="flex items-center gap-3 mb-4">
             <span className="font-mono text-accent text-sm">01.</span>
@@ -70,33 +69,38 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className="lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Left: Bio */}
           <div>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="space-y-5 text-text-secondary text-base leading-relaxed mb-10"
+              className="space-y-5 border-gray-200 text-text-secondary text-base leading-relaxed mb-10"
             >
               <p>
                 Hey! I&apos;m{" "}
                 <span className="text-text-primary font-semibold">Hussain</span>, a
-                Senior Fullstack Developer based in{" "}
-                <span className="text-accent">London, UK</span>. With 6+ years in the
-                industry, I&apos;ve gone from writing my first &apos;Hello World&apos; to
-                architecting systems that serve millions of users.
+                Fullstack Developer based in{" "}
+                <span className="text-accent">Pakistan, Karachi</span>. My journey started with an
+                internship at <span className="text-text-primary font-semibold">Syntaxfit</span>,
+                where I learned web development by building both personal and client projects, mainly
+                business websites, and applied my learning in practical ways.
               </p>
               <p>
-                I specialize in building{" "}
-                <span className="text-text-primary">end-to-end web applications</span> — from
-                pixel-perfect frontends to battle-tested backends. I care deeply about code
-                quality, performance, and the developer experience.
+                I specialize in creating{" "}
+                <span className="text-text-primary">end-to-end web applications</span> using
+                <span className="text-accent"> Next.js, React, Node.js, Payload CMS, and Prisma</span>.
+                I enjoy building projects that are not only functional but also organized and maintainable.
               </p>
               <p>
-                When I&apos;m not in the terminal, you&apos;ll find me contributing to open source,
-                writing technical articles, or exploring the latest in{" "}
-                <span className="text-accent-2">AI/ML tooling</span> for developers.
+                I&apos;m always learning and growing. Lately, I&apos;ve been diving into AI tools and
+                exploring how they can be applied to web development and business solutions.
+              </p>
+              <p>
+                Outside of coding, you&apos;ll find me{" "}
+                <span className="text-accent-2">gaming</span> or exploring new industries and market
+                trends, always curious about how technology shapes the world.
               </p>
             </motion.div>
 
@@ -108,10 +112,10 @@ export default function About() {
               className="grid grid-cols-2 gap-3 mb-8"
             >
               {[
-                { icon: MapPin, label: "Location", value: "London, UK" },
-                { icon: Calendar, label: "Experience", value: "6+ Years" },
-                { icon: Coffee, label: "Coffee/day", value: "4 cups ☕" },
-                { icon: Code2, label: "Commits", value: "3,000+ GH" },
+                { icon: MapPin, label: "Location", value: "Pakistan, Karachi" },
+                { icon: Calendar, label: "Experience", value: "3+ Years" },
+                // { icon: Coffee, label: "Coffee/day", value: "1 cups ☕" },
+                // { icon: Code2, label: "Commits", value: "500+ GH" },
               ].map((info) => (
                 <div
                   key={info.label}
@@ -127,24 +131,26 @@ export default function About() {
                 </div>
               ))}
             </motion.div>
+            <div className="flex justify-center">
+              <motion.a
+                href="/hussain-cv.pdf"
+                download
+                initial={{ opacity: 0 }}
+                animate={inView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.7, delay: 0.35 }}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+                className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg font-semibold rounded-xl hover:shadow-glow transition-all duration-300"
+              >
+                <Download size={16} />
+                Download Full CV (PDF)
+              </motion.a>
+            </div>
 
-            <motion.a
-              href="/cv-alex-karimi.pdf"
-              download
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : {}}
-              transition={{ duration: 0.7, delay: 0.35 }}
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-              className="inline-flex items-center gap-2 px-6 py-3 bg-accent text-bg font-semibold rounded-xl hover:shadow-glow transition-all duration-300"
-            >
-              <Download size={16} />
-              Download Full CV (PDF)
-            </motion.a>
           </div>
 
           {/* Right: Timeline */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -181,11 +187,11 @@ export default function About() {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Highlights grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, i) => (
             <motion.div
               key={item.title}
@@ -202,7 +208,7 @@ export default function About() {
               <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

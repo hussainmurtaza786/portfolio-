@@ -3,15 +3,8 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Download, Menu, X, Terminal } from "lucide-react";
+import { navItems } from "../app-config";
 
-const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Projects", href: "#projects" },
-  { label: "Experience", href: "#experience" },
-  { label: "Contact", href: "#contact" },
-];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -50,11 +43,10 @@ export default function Navbar() {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
             ? "py-3 bg-bg/80 backdrop-blur-xl border-b border-border"
             : "py-6"
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
@@ -79,11 +71,10 @@ export default function Navbar() {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className={`nav-link font-body text-sm font-medium transition-colors duration-200 ${
-                  activeSection === item.href.slice(1)
+                className={`nav-link font-body text-sm font-medium transition-colors duration-200 ${activeSection === item.href.slice(1)
                     ? "text-accent"
                     : "text-text-secondary hover:text-text-primary"
-                }`}
+                  }`}
               >
                 {item.label}
               </button>
@@ -93,7 +84,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <motion.a
-              href="/cv-alex-karimi.pdf"
+              href="/hussain-cv.pdf"
               download
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -131,17 +122,16 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.07 }}
                 onClick={() => handleNavClick(item.href)}
-                className={`font-display text-3xl font-bold transition-colors ${
-                  activeSection === item.href.slice(1)
+                className={`font-display text-3xl font-bold transition-colors ${activeSection === item.href.slice(1)
                     ? "text-accent"
                     : "text-text-primary hover:text-accent"
-                }`}
+                  }`}
               >
                 {item.label}
               </motion.button>
             ))}
             <motion.a
-              href="/cv-alex-karimi.pdf"
+              href="/hussain-cv.pdf"
               download
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
