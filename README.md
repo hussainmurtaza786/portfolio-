@@ -1,4 +1,4 @@
-# Alex Karimi — Portfolio Website
+# Hussain — Portfolio Website
 
 A modern, animated fullstack developer portfolio built with Next.js 15, Tailwind CSS, and Framer Motion.
 

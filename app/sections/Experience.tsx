@@ -8,7 +8,7 @@ import { Building2, GraduationCap, Award } from "lucide-react";
 const experiences = [
   {
     company: "TechFlow Inc.",
-    role: "Senior Fullstack Engineer",
+    role: " Fullstack Developer",
     period: "Jan 2024 – Present",
     type: "work",
     location: "London, UK (Hybrid)",
@@ -20,7 +20,7 @@ const experiences = [
       "Built real-time notification system handling 1M+ daily events with 99.9% delivery rate",
       "Designed and implemented multi-tenant PostgreSQL schema supporting enterprise clients",
     ],
-    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Redis", "AWS", "Docker"],
+    tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "AWS"],
     color: "#00D4FF",
   },
   {
@@ -49,12 +49,12 @@ const experiences = [
     description:
       "Frontend specialist at a creative digital agency. Delivered pixel-perfect web experiences for clients across fintech, healthcare, and e-commerce verticals.",
     achievements: [
-      "Delivered 15+ client projects on time and within budget",
+      "Delivered 3 client projects on time and within budget",
       "Built reusable component library reducing development time by 35%",
       "Implemented complex animations and interactive data visualizations using D3.js",
       "Mentored 2 junior developers in React best practices and modern CSS",
     ],
-    tech: ["React", "Vue.js", "TypeScript", "SASS", "D3.js", "Webpack", "Storybook"],
+    tech: ["React", "TypeScript", "SASS", ],
     color: "#00FFB3",
   },
   {
@@ -93,12 +93,12 @@ const experiences = [
   },
 ];
 
-const certifications = [
-  { name: "AWS Solutions Architect", issuer: "Amazon Web Services", year: "2023", color: "#FF9900" },
-  { name: "Google Cloud Professional", issuer: "Google Cloud", year: "2022", color: "#4285F4" },
-  { name: "MongoDB Developer Associate", issuer: "MongoDB University", year: "2022", color: "#00ED64" },
-  { name: "Docker Certified Associate", issuer: "Docker Inc.", year: "2021", color: "#2496ED" },
-];
+// const certifications = [
+//   { name: "AWS Solutions Architect", issuer: "Amazon Web Services", year: "2023", color: "#FF9900" },
+//   { name: "Google Cloud Professional", issuer: "Google Cloud", year: "2022", color: "#4285F4" },
+//   { name: "MongoDB Developer Associate", issuer: "MongoDB University", year: "2022", color: "#00ED64" },
+//   { name: "Docker Certified Associate", issuer: "Docker Inc.", year: "2021", color: "#2496ED" },
+// ];
 
 export default function Experience() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
@@ -139,11 +139,10 @@ export default function Experience() {
               <button
                 key={i}
                 onClick={() => setActiveExp(i)}
-                className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 text-sm font-body ${
-                  activeExp === i
+                className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 text-sm font-body ${activeExp === i
                     ? "bg-surface border border-border text-text-primary"
                     : "text-text-muted hover:text-text-secondary hover:bg-surface/50"
-                }`}
+                  }`}
               >
                 {exp.type === "edu" ? (
                   <GraduationCap size={16} style={{ color: activeExp === i ? exp.color : undefined }} />
@@ -256,7 +255,7 @@ export default function Experience() {
         </div>
 
         {/* Certifications */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
@@ -292,7 +291,7 @@ export default function Experience() {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

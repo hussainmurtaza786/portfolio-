@@ -3,9 +3,9 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Alex Karimi — Fullstack Developer",
+  title: "Hussain — Fullstack Developer",
   description:
-    "Senior Fullstack Developer specializing in React, Next.js, Node.js & cloud architecture. Building scalable, performant applications.",
+    "Fullstack Developer specializing in React, Next.js, Node.js and Typescript. Building scalable, performant applications.",
   keywords: [
     "Fullstack Developer",
     "React",
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
     "TypeScript",
     "Portfolio",
   ],
-  authors: [{ name: "Alex Karimi" }],
+  authors: [{ name: "Hussain" }],
   openGraph: {
-    title: "Alex Karimi — Fullstack Developer",
+    title: "Hussain — Fullstack Developer",
     description: "Senior Fullstack Developer specializing in React, Next.js, Node.js & cloud architecture.",
     type: "website",
   },

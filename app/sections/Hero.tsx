@@ -6,9 +6,9 @@ import { ArrowDown, Github, Linkedin, Twitter, Copy, CheckCheck } from "lucide-r
 import { TypeAnimation } from "react-type-animation";
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/alexkarimi", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/alexkarimi", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/alexkarimi", label: "Twitter" },
+  { icon: Github, href: "https://github.com/hussain", label: "GitHub" },
+  { icon: Linkedin, href: "https://github.com/hussainmurtaza786", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/hussain", label: "Twitter" },
 ];
 
 export default function Hero() {
@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("alex@karimi.dev");
+    navigator.clipboard.writeText("Hussain.dev");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -64,7 +64,7 @@ export default function Hero() {
             <span className="text-text-secondary">= {"{"}</span>
             <br />
             <span className="text-text-secondary pl-4">name:</span>{" "}
-            <span className="text-highlight">&apos;Alex Karimi&apos;</span>
+            <span className="text-highlight">&apos;Hussain&apos;</span>
             <span className="text-text-secondary">,</span>
             <br />
             <span className="text-text-secondary pl-4">role:</span>{" "}
@@ -123,9 +123,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.1 }}
           className="font-display font-extrabold text-6xl md:text-8xl lg:text-9xl leading-none mb-6 tracking-tight"
         >
-          <span className="text-text-primary">Alex</span>
-          <br />
-          <span className="gradient-text">Karimi</span>
+          <span className="text-text-primary">Hussain</span>
         </motion.h1>
 
         {/* Type animation */}
@@ -163,7 +161,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="max-w-2xl text-text-secondary text-base md:text-lg leading-relaxed mb-12"
         >
-          Senior Fullstack Developer with 6+ years of experience crafting high-performance
+          Fullstack Developer with 2+ years of experience crafting high-performance
           web applications. Passionate about clean code, great DX, and turning complex
           problems into elegant solutions.
         </motion.p>
@@ -190,7 +188,7 @@ export default function Hero() {
             className="flex items-center gap-2 px-8 py-4 border border-border rounded-xl text-text-primary font-semibold text-base hover:border-accent/40 hover:bg-accent/5 transition-all duration-300 font-body"
           >
             {copied ? <CheckCheck size={16} className="text-highlight" /> : <Copy size={16} />}
-            {copied ? "Copied!" : "alex@karimi.dev"}
+            {copied ? "Copied!" : "Hussain.dev"}
           </motion.button>
         </motion.div>
 
@@ -216,7 +214,7 @@ export default function Hero() {
             </motion.a>
           ))}
           <div className="w-px h-6 bg-border" />
-          <span className="text-text-muted text-sm font-mono">@alexkarimi</span>
+          <span className="text-text-muted text-sm font-mono">@hussain</span>
         </motion.div>
 
         {/* Stats row */}

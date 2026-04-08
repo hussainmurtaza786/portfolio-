@@ -8,43 +8,39 @@ const skillCategories = [
     title: "Frontend",
     color: "#00D4FF",
     skills: [
-      { name: "React / Next.js", level: 96 },
-      { name: "TypeScript", level: 92 },
+      { name: "React / Next.js", level: 85 },
+      { name: "TypeScript", level: 80 },
       { name: "Tailwind CSS", level: 95 },
-      { name: "Framer Motion", level: 88 },
-      { name: "GraphQL / Apollo", level: 82 },
+      { name: "Framer Motion", level: 75 },
+      { name: "Chakra UI", level: 95 },
     ],
   },
   {
     title: "Backend",
     color: "#7B61FF",
     skills: [
-      { name: "Node.js / Express", level: 94 },
-      { name: "Python / FastAPI", level: 86 },
-      { name: "PostgreSQL", level: 90 },
-      { name: "Redis", level: 82 },
-      { name: "MongoDB", level: 80 },
+      { name: "Node.js ", level: 70 },
+      { name: "Python", level: 50 },
+      { name: "PostgreSQL", level: 70 },
     ],
   },
-  {
-    title: "DevOps & Cloud",
-    color: "#00FFB3",
-    skills: [
-      { name: "AWS (EC2, S3, RDS)", level: 85 },
-      { name: "Docker / Kubernetes", level: 83 },
-      { name: "CI/CD (GitHub Actions)", level: 90 },
-      { name: "Terraform", level: 72 },
-      { name: "Linux / Bash", level: 88 },
-    ],
-  },
+  // {
+  //   title: "DevOps & Cloud",
+  //   color: "#00FFB3",
+  //   skills: [
+  //     { name: "AWS (EC2, S3, RDS)", level: 85 },
+  //     { name: "Docker / Kubernetes", level: 83 },
+  //     { name: "CI/CD (GitHub Actions)", level: 90 },
+  //     { name: "Terraform", level: 72 },
+  //     { name: "Linux / Bash", level: 88 },
+  //   ],
+  // },
 ];
 
 const techStack = [
-  "React", "Next.js", "TypeScript", "Node.js", "Python",
-  "PostgreSQL", "Redis", "MongoDB", "GraphQL", "REST",
-  "Docker", "Kubernetes", "AWS", "Git", "Prisma",
-  "tRPC", "Tailwind", "Figma", "Jest", "Playwright",
-  "FastAPI", "Express", "Supabase", "Vercel", "Linux",
+  "Html", "CSS", "JavaScript", "React", "Next.js", "TypeScript", "Node.js", "Python", "C/C++",
+  "PostgreSQL", "NeonDB", "AWS", "Git", "Prisma",
+  "Tailwind", "Figma", "FastAPI", "Supabase", "Vercel"
 ];
 
 export default function Skills() {

@@ -81,7 +81,7 @@ export default function About() {
             >
               <p>
                 Hey! I&apos;m{" "}
-                <span className="text-text-primary font-semibold">Alex Karimi</span>, a
+                <span className="text-text-primary font-semibold">Hussain</span>, a
                 Senior Fullstack Developer based in{" "}
                 <span className="text-accent">London, UK</span>. With 6+ years in the
                 industry, I&apos;ve gone from writing my first &apos;Hello World&apos; to

@@ -13,9 +13,9 @@ const navItems = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/alexkarimi", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/alexkarimi", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/alexkarimi", label: "Twitter" },
+  { icon: Github, href: "https://github.com/hussain", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/hussain", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/hussain", label: "Twitter" },
 ];
 
 export default function Footer() {
@@ -112,7 +112,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-col sm:flex-row items-center justify-between pt-8 border-t border-border gap-4">
           <div className="flex items-center gap-1.5 text-text-muted text-sm font-body">
-            <span>© 2024 Alex Karimi. Made with</span>
+            <span>© 2024 Hussain. Made with</span>
             <Heart size={12} className="text-accent-3 fill-current" />
             <span>and too much coffee.</span>
           </div>

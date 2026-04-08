@@ -8,9 +8,9 @@ import { Mail, Github, Linkedin, Twitter, Send, MapPin, Clock, CheckCircle } fro
 
 const contactLinks = [
   { icon: Mail, label: "Email", value: "alex@karimi.dev", href: "mailto:alex@karimi.dev", color: "#00D4FF" },
-  { icon: Github, label: "GitHub", value: "@alexkarimi", href: "https://github.com/alexkarimi", color: "#E8F4F8" },
-  { icon: Linkedin, label: "LinkedIn", value: "in/alexkarimi", href: "https://linkedin.com/in/alexkarimi", color: "#0A66C2" },
-  { icon: Twitter, label: "Twitter", value: "@alexkarimi", href: "https://twitter.com/alexkarimi", color: "#1DA1F2" },
+  { icon: Github, label: "GitHub", value: "@hussain", href: "https://github.com/hussain", color: "#E8F4F8" },
+  { icon: Linkedin, label: "LinkedIn", value: "in/hussain", href: "https://linkedin.com/in/hussain", color: "#0A66C2" },
+  { icon: Twitter, label: "Twitter", value: "@hussain", href: "https://twitter.com/hussain", color: "#1DA1F2" },
 ];
 
 export default function Contact() {

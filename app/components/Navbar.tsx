@@ -67,7 +67,7 @@ export default function Navbar() {
               <Terminal size={14} className="text-bg" />
             </div>
             <span className="font-display font-bold text-lg tracking-tight">
-              <span className="text-text-primary">Alex</span>
+              <span className="text-text-primary">Hussain</span>
               <span className="text-accent">.</span>
               <span className="text-text-secondary">dev</span>
             </span>

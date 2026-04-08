@@ -21,7 +21,7 @@ const projects = [
     forks: 187,
     gradient: "from-accent/20 to-accent-2/20",
     accent: "#00D4FF",
-    href: "https://github.com/alexkarimi/flowboard",
+    href: "https://github.com/hussain/flowboard",
     live: "https://flowboard.pro",
     featured: true,
   },
@@ -38,7 +38,7 @@ const projects = [
     forks: 134,
     gradient: "from-accent-2/20 to-accent-3/20",
     accent: "#7B61FF",
-    href: "https://github.com/alexkarimi/shopengine",
+    href: "https://github.com/hussain/shopengine",
     live: "https://shopengine.dev",
     featured: true,
   },
@@ -55,8 +55,8 @@ const projects = [
     forks: 620,
     gradient: "from-highlight/20 to-accent/20",
     accent: "#00FFB3",
-    href: "https://github.com/alexkarimi/design-system",
-    live: "https://ds.alexkarimi.dev",
+    href: "https://github.com/hussain/design-system",
+    live: "https://ds.hussain.dev",
     featured: true,
   },
   {
@@ -70,8 +70,8 @@ const projects = [
     forks: 78,
     gradient: "from-accent-3/20 to-accent/20",
     accent: "#FF6B6B",
-    href: "https://github.com/alexkarimi/ai-dashboard",
-    live: "https://aichat.alexkarimi.dev",
+    href: "https://github.com/hussain/ai-dashboard",
+    live: "https://aichat.hussain.dev",
     featured: false,
   },
   {
@@ -85,7 +85,7 @@ const projects = [
     forks: 112,
     gradient: "from-accent-2/20 to-highlight/20",
     accent: "#7B61FF",
-    href: "https://github.com/alexkarimi/devpulse",
+    href: "https://github.com/hussain/devpulse",
     live: "https://npmjs.com/package/devpulse",
     featured: false,
   },
@@ -100,8 +100,8 @@ const projects = [
     forks: 95,
     gradient: "from-accent/20 to-highlight/20",
     accent: "#00D4FF",
-    href: "https://github.com/alexkarimi/realtime-collab",
-    live: "https://collab.alexkarimi.dev",
+    href: "https://github.com/hussain/realtime-collab",
+    live: "https://collab.hussain.dev",
     featured: false,
   },
 ];
@@ -286,7 +286,7 @@ export default function Projects() {
           className="text-center mt-16"
         >
           <a
-            href="https://github.com/alexkarimi"
+            href="https://github.com/hussain"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 border border-border rounded-xl text-text-secondary hover:text-text-primary hover:border-accent/40 font-body font-medium transition-all duration-200"
