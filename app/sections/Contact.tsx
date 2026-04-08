@@ -4,13 +4,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import toast from "react-hot-toast";
-import { Mail, Github, Linkedin, Twitter, Send, MapPin, Clock, CheckCircle } from "lucide-react";
+import { Mail, Github, Send, MapPin, CheckCircle } from "lucide-react";
 
 const contactLinks = [
   { icon: Mail, label: "Email", value: "hussainmurtaza5222@gmail.com", href: "mailto:hussainmurtaza5222@gmail.com", color: "#00D4FF" },
   { icon: Github, label: "GitHub", value: "@hussainmurtaza786", href: "https://github.com/hussain", color: "#E8F4F8" },
-  // { icon: Linkedin, label: "LinkedIn", value: "in/hussain", href: "https://linkedin.com/in/hussain", color: "#0A66C2" },
-  // { icon: Twitter, label: "Twitter", value: "@hussain", href: "https://twitter.com/hussain", color: "#1DA1F2" },
 ];
 
 export default function Contact() {
@@ -91,10 +89,6 @@ export default function Contact() {
                   <MapPin size={14} className="text-accent" />
                   Pakistan, Karachi — Open to remote
                 </div>
-                {/* <div className="flex items-center gap-2 text-text-muted text-sm">
-                  <Clock size={14} className="text-accent" />
-                  GMT / BST timezone
-                </div> */}
               </div>
             </div>
 

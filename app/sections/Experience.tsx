@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Building2, GraduationCap, Award } from "lucide-react";
+import { Building2, GraduationCap, } from "lucide-react";
 
 const experiences = [
   {
@@ -210,7 +210,7 @@ export default function Experience() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <div className="flex items-center gap-3 mb-8">
-            <Award size={18} className="text-accent" />
+
             <h3 className="font-display font-bold text-xl text-text-primary">
               Certifications
             </h3>

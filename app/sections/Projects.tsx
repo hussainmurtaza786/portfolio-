@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { ExternalLink, Github, Star, GitFork } from "lucide-react";
+import { ExternalLink, Github, } from "lucide-react";
 
 const categories = ["All", "Fullstack", "Frontend", "Backend", "Open Source"];
 

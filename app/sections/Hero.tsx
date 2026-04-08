@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Twitter, Copy, CheckCheck } from "lucide-react";
+import { ArrowDown, Copy, CheckCheck } from "lucide-react";
 import { TypeAnimation } from "react-type-animation";
 import { socialLinks } from "../app-config";
 
