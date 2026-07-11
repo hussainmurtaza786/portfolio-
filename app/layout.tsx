@@ -3,22 +3,62 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "Hussain — Fullstack Developer",
+  metadataBase: new URL("https://hussain.dev"),
+  title: {
+    default: "Hussain — Fullstack Developer | React, Next.js, Node.js",
+    template: "%s | Hussain",
+  },
   description:
-    "Fullstack Developer specializing in React, Next.js, Node.js and Typescript. Building scalable, performant applications.",
+    "Fullstack Developer with 3+ years of experience building scalable web applications using React, Next.js, Node.js, TypeScript, PostgreSQL, and Prisma. Available for full-time roles and freelance projects.",
   keywords: [
     "Fullstack Developer",
-    "React",
-    "Next.js",
-    "Node.js",
-    "TypeScript",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js Developer",
+    "TypeScript Developer",
+    "Web Developer Pakistan",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full Stack Engineer",
     "Portfolio",
+    "Hussain",
+    "Hire Developer",
+    "Remote Developer",
+    "Freelance Developer",
+    "React Next.js Developer",
+    "Prisma PostgreSQL Developer",
   ],
-  authors: [{ name: "Hussain" }],
+  authors: [{ name: "Hussain", url: "https://github.com/hussainmurtaza786" }],
+  creator: "Hussain",
+  publisher: "Hussain",
   openGraph: {
-    title: "Hussain — Fullstack Developer",
-    description: "Senior Fullstack Developer specializing in React, Next.js, Node.js & cloud architecture.",
+    title: "Hussain — Fullstack Developer | React, Next.js, Node.js",
+    description:
+      "Fullstack Developer with 3+ years of experience building scalable web applications with React, Next.js, and Node.js.",
+    url: "https://hussain.dev",
+    siteName: "Hussain — Fullstack Developer",
     type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hussain — Fullstack Developer | React, Next.js, Node.js",
+    description:
+      "Fullstack Developer with 3+ years of experience building scalable web applications with React, Next.js, and Node.js.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: "https://hussain.dev",
   },
 };
 

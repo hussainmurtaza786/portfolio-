@@ -4,15 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Download, Calendar, MapPin, } from "lucide-react";
 
-
-
-// const timeline = [
-//   { year: "2022–2024", role: "Fullstack Developer", company: "Nexus Labs", type: "work" },
-//   { year: "2020–2022", role: "Frontend Developer", company: "PixelCraft Studio", type: "work" },
-//   { year: "2018–2020", role: "Junior Developer", company: "StartupX", type: "work" },
-//   { year: "2014–2018", role: "BSc Computer Science", company: "University of Manchester", type: "edu" },
-// ];
-
 export default function About() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
 
@@ -40,14 +31,14 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Left: Bio */}
           <div>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="space-y-5 border-gray-200 text-text-secondary text-base leading-relaxed mb-10"
+              className="space-y-5 text-text-secondary text-base leading-relaxed mb-10"
             >
               <p>
                 Hey! I&apos;m{" "}
@@ -84,7 +75,7 @@ export default function About() {
             >
               {[
                 { icon: MapPin, label: "Location", value: "Pakistan, Karachi" },
-                { icon: Calendar, label: "Experience", value: "3+ Years" },
+                { icon: Calendar, label: "Experience", value: "2+ Years" },
               ].map((info) => (
                 <div
                   key={info.label}
@@ -118,45 +109,6 @@ export default function About() {
 
           </div>
 
-          {/* Right: Timeline */}
-          {/* <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.2 }}
-          >
-            <h3 className="font-display font-bold text-xl text-text-primary mb-8">
-              Career Timeline
-            </h3>
-            <div className="relative">
-              <div className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-accent/50 via-accent-2/30 to-transparent" />
-              <div className="space-y-6">
-                {timeline.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.1 * i + 0.3 }}
-                    className="flex gap-6 pl-12 relative"
-                  >
-                    <div
-                      className={`absolute left-2.5 top-1.5 w-3 h-3 rounded-full border-2 -translate-x-1/2 ${
-                        item.type === "edu"
-                          ? "border-accent-2 bg-accent-2/30"
-                          : "border-accent bg-accent/30"
-                      }`}
-                    />
-                    <div className="flex-1">
-                      <span className="font-mono text-xs text-text-muted">{item.year}</span>
-                      <div className="font-semibold text-text-primary text-base">{item.role}</div>
-                      <div className={`text-sm font-body ${item.type === "edu" ? "text-accent-2" : "text-accent"}`}>
-                        {item.company}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div> */}
         </div>
       </div>
     </section>

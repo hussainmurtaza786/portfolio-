@@ -1,14 +1,15 @@
 "use client";
 
-import { useState } from "react";
+import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Mail, Github, Linkedin, Send, MapPin, CheckCircle } from "lucide-react";
 import toast from "react-hot-toast";
-import { Mail, Github, Send, MapPin, CheckCircle } from "lucide-react";
 
 const contactLinks = [
   { icon: Mail, label: "Email", value: "hussainmurtaza5222@gmail.com", href: "mailto:hussainmurtaza5222@gmail.com", color: "#00D4FF" },
-  { icon: Github, label: "GitHub", value: "@hussainmurtaza786", href: "https://github.com/hussain", color: "#E8F4F8" },
+  { icon: Github, label: "GitHub", value: "@hussainmurtaza786", href: "https://github.com/hussainmurtaza786", color: "#E8F4F8" },
+  { icon: Linkedin, label: "LinkedIn", value: "hussain-m-b3ab17404", href: "https://www.linkedin.com/in/hussain-m-b3ab17404", color: "#0A66C2" },
 ];
 
 export default function Contact() {
@@ -17,20 +18,32 @@ export default function Contact() {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!formState.name || !formState.email || !formState.message) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
     setSending(true);
-    // Simulate sending
-    await new Promise((r) => setTimeout(r, 1800));
-    setSending(false);
-    setSent(true);
-    toast.success("Message sent! I'll get back to you soon 🚀");
-    setFormState({ name: "", email: "", subject: "", message: "" });
-    setTimeout(() => setSent(false), 4000);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        toast.success("Message sent! I'll get back to you soon.");
+        setSent(true);
+        setFormState({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSent(false), 4000);
+      } else {
+        toast.error(data.error || "Failed to send message. Try again later.");
+      }
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -130,7 +143,7 @@ export default function Contact() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="lg:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="p-8 bg-surface rounded-2xl border border-border space-y-6">
+            <form onSubmit={handleSubmit} aria-label="Contact form" className="p-8 bg-surface rounded-2xl border border-border space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-xs font-mono text-text-muted mb-2 block">

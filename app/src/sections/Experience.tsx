@@ -9,7 +9,7 @@ const experiences = [
   {
     company: "SyntaxFit",
     role: "Fullstack Developer",
-    period: "Nov 2022 – OCT 2025",
+    period: "Sep 2023 – Nov 2025",
     type: "work",
     location: "Pakistan, Karachi",
     description:
@@ -39,15 +39,24 @@ const experiences = [
     ],
     tech: ["C", "C++"],
     color: "#7B61FF",
+  }, {
+    company: "Jinnah Govt College ",
+    role: "Pre-Engineering",
+    period: "Aug 2023 – June 2025",
+    type: "edu",
+    location: "Pakistan, Karachi",
+    description:
+      "Completed my pre-engineering studies at Jinnah Govt College, where I focused on mathematics, physics, and computer science fundamentals. This period was crucial in shaping my analytical and problem-solving skills, preparing me for advanced studies in computer science.",
+    achievements: [
+      "Developed strong analytical and problem-solving skills through rigorous coursework",
+      "Participated in science and technology clubs, enhancing practical understanding of engineering concepts",
+      "Prepared for higher education in computer science with a solid foundation in mathematics and physics",
+      "Engaged in collaborative projects and competitions, fostering teamwork and innovation"
+    ],
+    tech: ["C", "C++"],
+    color: "#7B61FF",
   }
 ];
-
-// const certifications = [
-//   { name: "AWS Solutions Architect", issuer: "Amazon Web Services", year: "2023", color: "#FF9900" },
-//   { name: "Google Cloud Professional", issuer: "Google Cloud", year: "2022", color: "#4285F4" },
-//   { name: "MongoDB Developer Associate", issuer: "MongoDB University", year: "2022", color: "#00ED64" },
-//   { name: "Docker Certified Associate", issuer: "Docker Inc.", year: "2021", color: "#2496ED" },
-// ];
 
 export default function Experience() {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.05 });
@@ -83,11 +92,16 @@ export default function Experience() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="lg:w-56 flex lg:flex-col gap-2 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0 flex-shrink-0"
+            role="tablist"
+            aria-label="Experience entries"
           >
             {experiences.map((exp, i) => (
               <button
                 key={i}
                 onClick={() => setActiveExp(i)}
+                role="tab"
+                aria-selected={activeExp === i}
+                aria-controls={`experience-panel-${i}`}
                 className={`flex-shrink-0 flex items-center gap-3 px-4 py-3 rounded-xl text-left transition-all duration-200 text-sm font-body ${activeExp === i
                   ? "bg-surface border border-border text-text-primary"
                   : "text-text-muted hover:text-text-secondary hover:bg-surface/50"
@@ -111,13 +125,15 @@ export default function Experience() {
             className="flex-1 min-h-[500px]"
           >
             <AnimatePresence mode="wait">
-              <motion.div
-                key={activeExp}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.3 }}
-                className="bg-surface rounded-2xl border border-border p-8 h-full"
+                <motion.div
+                  key={activeExp}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  role="tabpanel"
+                  id={`experience-panel-${activeExp}`}
+                  className="bg-surface rounded-2xl border border-border p-8 h-full"
               >
                 {/* Title area */}
                 <div className="flex items-start justify-between mb-6">

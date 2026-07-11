@@ -24,7 +24,7 @@ export default function Hero() {
   }, []);
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("hussainmurtaza5222@gmail.com.dev");
+    navigator.clipboard.writeText("hussainmurtaza5222@gmail.com");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -48,51 +48,7 @@ export default function Hero() {
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-2/5 rounded-full blur-[120px] animate-pulse-slow" style={{ animationDelay: "2s" }} />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent-3/3 rounded-full blur-[150px]" />
 
-        {/* Floating code snippets */}
-        <motion.div
-          animate={{ y: [-10, 10, -10] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-32 right-16 hidden lg:block"
-        >
-          <div className="bg-surface/80 backdrop-blur border border-border rounded-xl p-4 font-mono text-xs leading-relaxed">
-            <span className="text-accent-2">const</span>{" "}
-            <span className="text-accent">developer</span>{" "}
-            <span className="text-text-secondary">= {"{"}</span>
-            <br />
-            <span className="text-text-secondary pl-4">name:</span>{" "}
-            <span className="text-highlight">&apos;Hussain&apos;</span>
-            <span className="text-text-secondary">,</span>
-            <br />
-            <span className="text-text-secondary pl-4">role:</span>{" "}
-            <span className="text-highlight">&apos;Fullstack Dev&apos;</span>
-            <span className="text-text-secondary">,</span>
-            <br />
-            <span className="text-text-secondary pl-4">passion:</span>{" "}
-            <span className="text-accent-3">&apos;Building great UI / UX&apos;</span>
-            <br />
-            <span className="text-text-secondary">{"}"}</span>
-          </div>
-        </motion.div>
-
-        <motion.div
-          animate={{ y: [10, -10, 10] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-          className="absolute bottom-40 left-16 hidden lg:block"
-        >
-          <div className="bg-surface/80 backdrop-blur border border-border rounded-xl p-4 font-mono text-xs leading-relaxed">
-            <span className="text-accent-2">function</span>{" "}
-            <span className="text-accent">solve</span>
-            <span className="text-text-secondary">(problem) {"{"}</span>
-            <br />
-            <span className="text-text-secondary pl-4">return</span>{" "}
-            <span className="text-highlight">elegantSolution</span>
-            <span className="text-text-secondary">();</span>
-            <br />
-            <span className="text-text-secondary">{"}"}</span>
-          </div>
-        </motion.div>
-
-        {/* Grid lines decoration */}
+       {/* Grid lines decoration */}
         <div className="absolute left-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-border to-transparent opacity-50" />
         <div className="absolute right-0 top-0 h-full w-px bg-gradient-to-b from-transparent via-border to-transparent opacity-50" />
       </div>
@@ -155,7 +111,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="max-w-2xl text-text-secondary text-base md:text-lg leading-relaxed mb-12"
         >
-          Fullstack Developer with 3+ years of experience crafting high-performance
+          Fullstack Developer with 2+ years of experience crafting high-performance
           web applications. Passionate about clean code, and turning complex
           problems into elegant solutions.
         </motion.p>
@@ -211,27 +167,7 @@ export default function Hero() {
           <span className="text-text-muted text-sm font-mono">@hussainmurtaza</span>
         </motion.div>
 
-        {/* Stats row */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.7 }}
-          className="grid grid-cols-3 gap-8 md:gap-16"
-        >
-          {[
-            { value: "2+", label: "Years Experience" },
-            { value: "10+", label: "Projects Shipped" },
-            { value: "3+", label: "Happy Clients" },
-          ].map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="font-display font-bold text-3xl md:text-4xl text-accent mb-1">
-                {stat.value}
-              </div>
-              <div className="text-text-muted text-sm font-body">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div> */}
-      </div>
+           </div>
 
       {/* Scroll indicator */}
       <motion.button
@@ -239,6 +175,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
         onClick={scrollToNext}
+        aria-label="Scroll to about section"
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-text-muted hover:text-accent transition-colors"
       >
         <motion.div
