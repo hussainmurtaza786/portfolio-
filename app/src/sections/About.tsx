@@ -31,7 +31,7 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className=" gap-16 items-start mb-24">
           {/* Left: Bio */}
           <div>
             <motion.div
