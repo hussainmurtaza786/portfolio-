@@ -111,7 +111,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.4 }}
           className="max-w-2xl text-text-secondary text-base md:text-lg leading-relaxed mb-12"
         >
-          Fullstack Developer with 2+ years of experience crafting high-performance
+          Fullstack Developer with 3+ years of experience crafting high-performance
           web applications. Passionate about clean code, and turning complex
           problems into elegant solutions.
         </motion.p>
